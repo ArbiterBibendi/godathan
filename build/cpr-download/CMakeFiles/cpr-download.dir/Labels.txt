@@ -1,0 +1,14 @@
+# Target labels
+ cpr-download
+# Source files and their labels
+/home/drake/godathan/build/cpr-download/CMakeFiles/cpr-download
+/home/drake/godathan/build/cpr-download/CMakeFiles/cpr-download.rule
+/home/drake/godathan/build/cpr-download/CMakeFiles/cpr-download-complete.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-install.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-mkdir.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-download.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-patch.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-configure.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-build.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-test.rule
+/home/drake/godathan/build/cpr-download/cpr-download-prefix/src/cpr-download-stamp/cpr-download-skip-update.rule

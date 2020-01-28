@@ -1,0 +1,14 @@
+# Target labels
+ asio-download
+# Source files and their labels
+/home/drake/godathan/build/asio-download/CMakeFiles/asio-download
+/home/drake/godathan/build/asio-download/CMakeFiles/asio-download.rule
+/home/drake/godathan/build/asio-download/CMakeFiles/asio-download-complete.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-install.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-mkdir.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-download.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-patch.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-configure.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-build.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-test.rule
+/home/drake/godathan/build/asio-download/asio-download-prefix/src/asio-download-stamp/asio-download-skip-update.rule
