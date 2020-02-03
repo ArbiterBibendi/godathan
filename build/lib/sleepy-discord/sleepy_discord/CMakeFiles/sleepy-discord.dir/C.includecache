@@ -6,3 +6,25 @@
 
 #IncludeRegexTransform: 
 
+../lib/sleepy-discord/include/sleepy_discord/json.h
+stdlib.h
+-
+stdbool.h
+-
+stdio.h
+-
+ctype.h
+-
+stdarg.h
+-
+string.h
+-
+string
+-
+vector
+-
+
+/home/drake/godathan/lib/sleepy-discord/sleepy_discord/json.c
+json.h
+/home/drake/godathan/lib/sleepy-discord/sleepy_discord/json.h
+
