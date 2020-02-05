@@ -10,12 +10,16 @@
 #include <stdio.h>
 
 
+#define API_TOKEN "API_TOKEN_GOES_HERE"
+
+
+
 
 
 class Godathan : public SleepyDiscord::DiscordClient{
     using SleepyDiscord::DiscordClient::DiscordClient;
     
-    std::string replace_string(std::string string, std::string substr1, std::string substr2){ //Replace string with another string
+    std::string replace_string(std::string string, std::string substr1, std::string substr2){
         std::string newStr = string;
         
         int pos = string.find(substr1, 0);
@@ -65,10 +69,19 @@ class Godathan : public SleepyDiscord::DiscordClient{
                 
                 std::string args = replace_string(message.content, "-yt ", "");
                 if (args.find("mp3 ") == 0){
+                    sendMessage(message.channelID, "Downloading MP3");
+                    
                     args.erase(0,4);
                     args += " -x --audio-format mp3";
                 }
+                else if(args.find("mp4 ") == 0){
+                    sendMessage(message.channelID, "Downloading MP4");
+                    
+                    args.erase(0,4);
+                    args += " -f mp4";
+                }
                 else{
+                    sendMessage(message.channelID, "You didn't specify a format. Defaulting to MP4.");
                     args += " -f mp4";
                 }
                 std::vector<std::string> argslist = arguments(args);
@@ -126,8 +139,8 @@ class Godathan : public SleepyDiscord::DiscordClient{
                 
                 //delete youtube file
                 remove(filename.c_str());
-                
             }
+            
         }
     }
 };
@@ -135,7 +148,7 @@ class Godathan : public SleepyDiscord::DiscordClient{
 
 int main(){
     
-	Godathan godathan("TOKEN_HIDDEN", 2);
+	Godathan godathan(API_TOKEN, 2);
     godathan.run();
 	return 0;
 }
