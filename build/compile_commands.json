@@ -1,187 +1,187 @@
 [
 {
   "directory": "/home/drake/godathan/build",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -I/home/drake/godathan/include -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -o CMakeFiles/godathan.dir/src/main.cpp.o -c /home/drake/godathan/src/main.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -I/home/drake/godathan/include -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -o CMakeFiles/godathan.dir/src/main.cpp.o -c /home/drake/godathan/src/main.cpp",
   "file": "/home/drake/godathan/src/main.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/auth.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/auth.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/auth.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/auth.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/auth.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/cookies.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cookies.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/cookies.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cookies.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cookies.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/cprtypes.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cprtypes.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/cprtypes.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cprtypes.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/cprtypes.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/digest.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/digest.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/digest.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/digest.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/digest.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/error.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/error.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/error.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/error.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/error.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/multipart.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/multipart.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/multipart.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/multipart.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/multipart.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/parameters.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/parameters.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/parameters.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/parameters.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/parameters.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/payload.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/payload.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/payload.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/payload.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/payload.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/proxies.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/proxies.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/proxies.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/proxies.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/proxies.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/session.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/session.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/session.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/session.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/session.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/timeout.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/timeout.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/timeout.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/timeout.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/timeout.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/util.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/util.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/util.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/util.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/util.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
-  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include    -std=gnu++11 -o CMakeFiles/cpr.dir/ssl_options.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/ssl_options.cpp",
+  "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/ssl_options.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/ssl_options.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/ssl_options.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/asignments_client.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/asignments_client.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/asignments_client.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/asignments_client.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/asignments_client.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/attachment.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/attachment.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/attachment.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/attachment.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/attachment.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/channel.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/channel.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/channel.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/channel.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/channel.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/client.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/client.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/client.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/client.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/client.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/cpr_session.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/cpr_session.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/cpr_session.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/cpr_session.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/cpr_session.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/default_functions.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/default_functions.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/default_functions.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/default_functions.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/default_functions.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/discord_object_interface.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/discord_object_interface.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/discord_object_interface.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/discord_object_interface.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/discord_object_interface.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/embed.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/embed.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/embed.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/embed.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/embed.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/endpoints.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/endpoints.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/endpoints.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/endpoints.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/endpoints.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/gateway.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/gateway.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/gateway.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/gateway.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/gateway.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/http.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/http.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/http.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/http.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/http.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/invite.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/invite.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/invite.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/invite.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/invite.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/json_wrapper.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/json_wrapper.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/json_wrapper.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/json_wrapper.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/json_wrapper.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/cc -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -o CMakeFiles/sleepy-discord.dir/json.c.o   -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/json.c",
+  "command": "/usr/bin/cc -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -o CMakeFiles/sleepy-discord.dir/json.c.o   -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/json.c",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/json.c"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/message.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/message.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/message.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/message.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/message.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/permissions.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/permissions.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/permissions.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/permissions.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/permissions.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/sd_error.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/sd_error.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/sd_error.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/sd_error.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/sd_error.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/server.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/server.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/server.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/server.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/server.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/user.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/user.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/user.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/user.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/user.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/uwebsockets_websocket.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/uwebsockets_websocket.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/uwebsockets_websocket.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/uwebsockets_websocket.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/uwebsockets_websocket.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/voice.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/voice.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/voice.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/voice.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/voice.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/webhook.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/webhook.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/webhook.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/webhook.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/webhook.cpp"
 },
 {
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/sleepy_discord",
-  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent    -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/websocketpp_websocket.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/websocketpp_websocket.cpp",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -DNONEXISTANT_GIT_INFO -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -std=gnu++14 -o CMakeFiles/sleepy-discord.dir/websocketpp_websocket.cpp.o -c /home/drake/godathan/lib/sleepy-discord/sleepy_discord/websocketpp_websocket.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/sleepy_discord/websocketpp_websocket.cpp"
 }
 ]

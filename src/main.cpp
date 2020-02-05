@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 
-#define API_TOKEN "API_TOKEN_GOES_HERE"
+#define API_TOKEN "TOKEN_HIDDEN"
 
 
 
@@ -33,7 +33,20 @@ class Godathan : public SleepyDiscord::DiscordClient{
         int i = 0;
         int li = 0;
         
-        while(i != std::string::npos){ //
+        int q1 = 0;
+        int q2 = 0;
+        while(i != std::string::npos){ //    -f mp4 "one two three"
+            q1 = s.find("\"", li);
+            q2 = s.find("\"", q1+1);
+            
+            if((q1 != std::string::npos) && (q2 != std::string::npos))
+            {
+                sub = s.substr(q1, q2-q1+1);
+                li = q2+1;
+                args.push_back(sub);
+            }
+            
+            
             i = s.find(" ", li);
             sub = s.substr(li, i-li);
             li = i+1;
@@ -64,30 +77,40 @@ class Godathan : public SleepyDiscord::DiscordClient{
                 }catch(...){}
             }
             
+            if(message.startsWith("-exit")){
+                exit(0);
+            }
+            
             if(message.startsWith("-yt"))
             {
                 
                 std::string args = replace_string(message.content, "-yt ", "");
-                if (args.find("mp3 ") == 0){
+                std::string url;
+                if (args.find("mp3 ") == 0){ //if option mp3 is specified extract url and specify mp3 format
                     sendMessage(message.channelID, "Downloading MP3");
                     
                     args.erase(0,4);
-                    args += " -x --audio-format mp3";
+                    url = args;
+                    args = "-x --audio-format mp3";
                 }
-                else if(args.find("mp4 ") == 0){
+                else if(args.find("mp4 ") == 0){ //if option mp4 is specified extract url and specify mp4 format
                     sendMessage(message.channelID, "Downloading MP4");
                     
                     args.erase(0,4);
-                    args += " -f mp4";
+                    url = args;
+                    args = "-f mp4";
                 }
-                else{
+                else{ //if no format is specified, default to mp4
                     sendMessage(message.channelID, "You didn't specify a format. Defaulting to MP4.");
-                    args += " -f mp4";
+                    
+                    url = args;
+                    args = "-f mp4";
                 }
-                std::vector<std::string> argslist = arguments(args);
-                //Places arguments into a vector buffer and transfers them into an array
-                //If mp3 option is specified then pass mp3 audio arguments to youtube-dl, otherwise 
-                //specify mp4 as format
+                args += " --max-filesize 8m"; //max discord file upload size is 8 megabytes
+
+            
+                std::vector<std::string> argslist = arguments(args); //pass argument list to a basic parser
+                argslist.push_back("ytsearch:" + url); //append ytsearch argument to argslist vector
                 
                 
                 
@@ -100,20 +123,24 @@ class Godathan : public SleepyDiscord::DiscordClient{
                 //Covert arguments vector into a char * array to pass to execv
                 for (int i = 0; i < argsSize; i++){ 
                     argv1[i+1] = argslist[i].c_str();
-                    std::cout << argslist[i] << "s" << std::endl;
+                    std::cout << argslist[i].c_str() <<  std::endl;
                 }
                 argv1[argsSize+1] = NULL;
-                const char *const * argv = argv1;
+                const char *const * argv = argv1; //transfer argv1 array into const char *const * to pass to execv
                 
                 
                 
                 //call youtube-dl
-                int pid = fork();
-                if(pid == 0){
-                    execv("../externals/youtube-dl", (char**)argv);
+                int pid = fork();  //fork to provide new memory space for youtube-dl to run in
+                if(pid == 0){ //child process code
+                    execv("../externals/youtube-dl", (char**)argv); //replace child process image with youtube-dl
+                    wait(NULL);
                 }
                 //wait until youtube-dl exits and find file containing "mp(3/4)"
                 wait(NULL);
+                
+                
+                //code below iterates through directory and find file with "mp" in it's name'
                 DIR * dir = opendir("./");
                 struct dirent *entry;
                 
@@ -130,7 +157,7 @@ class Godathan : public SleepyDiscord::DiscordClient{
                 
                 
                 try{
-                    uploadFile(message.channelID, filename, "Brap");
+                    uploadFile(message.channelID, filename, "");
                     
                 }
                 catch(...){
