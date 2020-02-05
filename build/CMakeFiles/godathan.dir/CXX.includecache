@@ -9219,6 +9219,20 @@ websocketpp/impl/utilities_impl.hpp
 /home/drake/godathan/src/main.cpp
 iostream
 -
+string
+-
+vector
+-
+unistd.h
+-
+signal.h
+-
 websocketpp_websocket.h
+-
+sys/wait.h
+-
+dirent.h
+-
+stdio.h
 -
 
