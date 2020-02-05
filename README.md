@@ -1,8 +1,8 @@
 # Godathan
 
-Discord Bot
+##A Discord Bot
 
-Commands:
+**Commands:**
 ```
 -send 
     Usage: -send ChannelID Message 
