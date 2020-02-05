@@ -3,7 +3,7 @@
 Discord Bot
 
 Commands:
-
+```
 -send 
     Usage: -send ChannelID Message 
     Sends a message to a text channel
@@ -13,7 +13,7 @@ Commands:
     Usage: -yt \[format\] LINK
     Downloads a youtube video into the discord chat (Must be smaller than 8MB)
     Formats: mp3, mp4
-    
+```
 ## Getting Started
 
 ### Prerequisites
@@ -31,13 +31,12 @@ Curl
 Create a Discord Bot Application [Here](https://discordapp.com/developers/docs/intro)
 Take note of it's API Token
 
-
+To install godathan:
 ```
 git clone https://github.com/ArbiterBibendi/godathan
 cd godathan
 ```
 Change the API_TOKEN definition from API_TOKEN_GOES_HERE to your bot's API Token
-
 ```
 cd build
 cmake ..
