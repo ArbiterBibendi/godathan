@@ -10,7 +10,7 @@
     E.g. "-send 673944456940093451 This is an example message"
 
 -yt
-    Usage: -yt \[format\] LINK
+    Usage: -yt [format] LINK
     Downloads a youtube video into the discord chat (Must be smaller than 8MB)
     Formats: mp3, mp4
 ```
