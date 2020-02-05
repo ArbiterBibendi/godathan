@@ -44,8 +44,7 @@ make
 ```
 
 The executable will be placed in godathan/bin
-Invite your bot to your server
-Run the executable
+Now Invite your bot to your server and run the executable
 
 
 ## Authors
