@@ -1,6 +1,6 @@
 # Godathan
 
-##A Discord Bot
+## A Discord Bot
 
 **Commands:**
 ```
