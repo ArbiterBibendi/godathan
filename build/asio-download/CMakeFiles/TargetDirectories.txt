@@ -1,3 +1,0 @@
-/home/drake/godathan/build/asio-download/CMakeFiles/rebuild_cache.dir
-/home/drake/godathan/build/asio-download/CMakeFiles/asio-download.dir
-/home/drake/godathan/build/asio-download/CMakeFiles/edit_cache.dir

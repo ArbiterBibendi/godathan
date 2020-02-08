@@ -23,7 +23,7 @@ What things you need to install the software
 ```
 CMake
 Make
-Curl
+libcurl4-openssl-dev
 ```
 
 ### Installing
