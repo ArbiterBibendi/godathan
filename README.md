@@ -36,7 +36,7 @@ To install godathan:
 git clone https://github.com/ArbiterBibendi/godathan
 cd godathan
 ```
-Change the API_TOKEN definition in src/main.cpp from API_TOKEN_GOES_HERE to your bot's API Token
+Change the the API Token in the APITOKEN file from YOUR_API_TOKEN_HERE to your bot's API Token
 ```
 cd build
 cmake ..
