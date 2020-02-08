@@ -33,9 +33,9 @@ Take note of it's API Token
 
 To install godathan:
 
-Clone the repo
+Clone the repo and submodules
 ```
-git clone https://github.com/ArbiterBibendi/godathan
+git clone https://github.com/ArbiterBibendi/godathan --recurse-submodules
 cd godathan
 ```
 Change the the API Token in the APITOKEN.example file from YOUR_API_TOKEN_HERE to your bot's API Token
