@@ -195,6 +195,33 @@ sleepy-discord/fast:
 	$(MAKE) -f lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/build.make lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/build
 .PHONY : sleepy-discord/fast
 
+src/godathan.o: src/godathan.cpp.o
+
+.PHONY : src/godathan.o
+
+# target to build an object file
+src/godathan.cpp.o:
+	$(MAKE) -f CMakeFiles/godathan.dir/build.make CMakeFiles/godathan.dir/src/godathan.cpp.o
+.PHONY : src/godathan.cpp.o
+
+src/godathan.i: src/godathan.cpp.i
+
+.PHONY : src/godathan.i
+
+# target to preprocess a source file
+src/godathan.cpp.i:
+	$(MAKE) -f CMakeFiles/godathan.dir/build.make CMakeFiles/godathan.dir/src/godathan.cpp.i
+.PHONY : src/godathan.cpp.i
+
+src/godathan.s: src/godathan.cpp.s
+
+.PHONY : src/godathan.s
+
+# target to generate assembly for a file
+src/godathan.cpp.s:
+	$(MAKE) -f CMakeFiles/godathan.dir/build.make CMakeFiles/godathan.dir/src/godathan.cpp.s
+.PHONY : src/godathan.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -237,6 +264,9 @@ help:
 	@echo "... install"
 	@echo "... cpr"
 	@echo "... sleepy-discord"
+	@echo "... src/godathan.o"
+	@echo "... src/godathan.i"
+	@echo "... src/godathan.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

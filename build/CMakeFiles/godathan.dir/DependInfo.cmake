@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/drake/godathan/src/godathan.cpp" "/home/drake/godathan/build/CMakeFiles/godathan.dir/src/godathan.cpp.o"
   "/home/drake/godathan/src/main.cpp" "/home/drake/godathan/build/CMakeFiles/godathan.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

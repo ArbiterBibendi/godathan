@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/godathan"
   "../bin/godathan.pdb"
+  "CMakeFiles/godathan.dir/src/godathan.cpp.o"
   "CMakeFiles/godathan.dir/src/main.cpp.o"
 )
 

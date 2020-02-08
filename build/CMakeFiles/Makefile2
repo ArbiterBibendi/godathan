@@ -212,12 +212,12 @@ CMakeFiles/godathan.dir/all: lib/sleepy-discord/deps/cpr/cpr/CMakeFiles/cpr.dir/
 CMakeFiles/godathan.dir/all: lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/all
 	$(MAKE) -f CMakeFiles/godathan.dir/build.make CMakeFiles/godathan.dir/depend
 	$(MAKE) -f CMakeFiles/godathan.dir/build.make CMakeFiles/godathan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/drake/godathan/build/CMakeFiles --progress-num=15,16 "Built target godathan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/drake/godathan/build/CMakeFiles --progress-num=15,16,17 "Built target godathan"
 .PHONY : CMakeFiles/godathan.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/godathan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/godathan/build/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/godathan/build/CMakeFiles 41
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/godathan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/godathan/build/CMakeFiles 0
 .PHONY : CMakeFiles/godathan.dir/rule
@@ -266,7 +266,7 @@ lib/sleepy-discord/deps/cpr/cpr/CMakeFiles/cpr.dir/clean:
 lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/all: lib/sleepy-discord/deps/cpr/cpr/CMakeFiles/cpr.dir/all
 	$(MAKE) -f lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/build.make lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/depend
 	$(MAKE) -f lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/build.make lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/drake/godathan/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target sleepy-discord"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/drake/godathan/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41 "Built target sleepy-discord"
 .PHONY : lib/sleepy-discord/sleepy_discord/CMakeFiles/sleepy-discord.dir/all
 
 # Build rule for subdir invocation for target.

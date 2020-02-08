@@ -5,6 +5,11 @@
   "file": "/home/drake/godathan/src/main.cpp"
 },
 {
+  "directory": "/home/drake/godathan/build",
+  "command": "/usr/bin/c++  -DCURL_STATICLIB -I/home/drake/godathan/include -I/home/drake/godathan/lib/sleepy-discord/include -I/home/drake/godathan/lib/sleepy-discord/deps/include -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include -I/home/drake/godathan/lib/sleepy-discord/deps/asio/asio/include -I/home/drake/godathan/lib/sleepy-discord/deps/websocketpp -I/home/drake/godathan/lib/sleepy-discord/include/sleepy_discord/IncludeNonexistent  -g   -Wall -pthread -o CMakeFiles/godathan.dir/src/godathan.cpp.o -c /home/drake/godathan/src/godathan.cpp",
+  "file": "/home/drake/godathan/src/godathan.cpp"
+},
+{
   "directory": "/home/drake/godathan/build/lib/sleepy-discord/deps/cpr/cpr",
   "command": "/usr/bin/c++  -DCMAKE_USE_OPENSSL -DCURL_STATICLIB -DUSE_SYSTEM_CURL -I/home/drake/godathan/lib/sleepy-discord/deps/cpr/include  -g   -std=gnu++11 -o CMakeFiles/cpr.dir/auth.cpp.o -c /home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/auth.cpp",
   "file": "/home/drake/godathan/lib/sleepy-discord/deps/cpr/cpr/auth.cpp"

@@ -108,6 +108,28 @@ user.h
 channel.h
 ../include/channel.h
 
+../include/godathan.h
+websocketpp_websocket.h
+-
+sys/wait.h
+-
+sys/wait.h
+-
+dirent.h
+-
+stdio.h
+-
+unistd.h
+-
+signal.h
+-
+iostream
+-
+string
+-
+vector
+-
+
 ../include/http.h
 string
 -
@@ -9217,22 +9239,10 @@ websocketpp/impl/utilities_impl.hpp
 ../lib/sleepy-discord/deps/websocketpp/websocketpp/version.hpp
 
 /home/drake/godathan/src/main.cpp
-iostream
+godathan.h
 -
 string
 -
-vector
--
-unistd.h
--
-signal.h
--
-websocketpp_websocket.h
--
-sys/wait.h
--
-dirent.h
--
-stdio.h
+fstream
 -
 
