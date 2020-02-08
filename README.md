@@ -32,11 +32,19 @@ Create a Discord Bot Application [Here](https://discordapp.com/developers/docs/i
 Take note of it's API Token
 
 To install godathan:
+
+Clone the repo
 ```
 git clone https://github.com/ArbiterBibendi/godathan
 cd godathan
 ```
-Change the the API Token in the APITOKEN file from YOUR_API_TOKEN_HERE to your bot's API Token
+Change the the API Token in the APITOKEN.example file from YOUR_API_TOKEN_HERE to your bot's API Token
+then rename APITOKEN.example to APITOKEN
+```
+echo "{YOUR_API_TOKEN}" > APITOKEN.example
+mv APITOKEN.example APITOKEN
+```
+Move to the build directory and build the project
 ```
 cd build
 cmake ..
