@@ -38,13 +38,41 @@ std::vector<std::string> Godathan::arguments(std::string s){ //Places command li
         
     return args;
 }
+int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir){
+    int argsSize = argslist.size();
+    const char* argv1[argsSize+2]; //extra space added for program name and sentinel
+                
+             
+    //Covert arguments vector into a char * array to pass to execv
+    for (int i = 0; i < argsSize; i++){ 
+        argv1[i+1] = argslist[i].c_str();
+        std::cout << argslist[i].c_str() <<  std::endl;
+    }
+    argv1[argsSize+1] = NULL;
+    const char *const * argv = argv1; //transfer argv1 array into const char *const * to pass to execv
+                
+                
+    try{
+        //call program
+        int pid = fork();  //fork to provide new memory space for program-dl to run in
+        if(pid == 0){ //child process code
+            chdir(workingDir.c_str());
+            execv(pathToProcess.c_str(), (char**)argv); //replace child process image with program
+        }
+    }catch(...){
+        return 1;
+    }
+
+    wait(NULL);
+            
+    return 0;
+}
 
 void Godathan::handle_child(int){
     wait(NULL);
 }
 
 void Godathan::onMessage(SleepyDiscord::Message message){
-    std::cout << "Message Recieved!" << std::endl;
     if(message.author.ID != 456655185901518848){ //If message isn't by godathan
         
         if(message.startsWith("-exit")){
@@ -57,11 +85,11 @@ void Godathan::onMessage(SleepyDiscord::Message message){
          */
         if(message.startsWith("-send ")){
             try{
-                std::string argString = replace_string(message.content, "-send ", "");
-                std::vector<std::string> args = arguments(argString);
+                std::string args = replace_string(message.content, "-send ", "");
+                std::vector<std::string> argslist = arguments(args);
 
-                std::string channelID = args[0];
-                std::string messageToSend = replace_string(argString, channelID, "");
+                std::string channelID = argslist[0];
+                std::string messageToSend = replace_string(args, channelID, "");
                 
                 sendMessage(channelID, messageToSend);
             }catch(...){}
@@ -106,41 +134,21 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             argslist.push_back("ytsearch:" + url); //append ytsearch argument to argslist vector
                 
                 
-                
-                
-                
-            int argsSize = argslist.size();
-            const char* argv1[argsSize+2]; //extra space added for program name and sentinel
-                
-             
-            //Covert arguments vector into a char * array to pass to execv
-            for (int i = 0; i < argsSize; i++){ 
-                argv1[i+1] = argslist[i].c_str();
-                std::cout << argslist[i].c_str() <<  std::endl;
-            }
-            argv1[argsSize+1] = NULL;
-            const char *const * argv = argv1; //transfer argv1 array into const char *const * to pass to execv
-                
-                
-                
-            //call youtube-dl
-            int pid = fork();  //fork to provide new memory space for youtube-dl to run in
-            if(pid == 0){ //child process code
-                execv("../externals/youtube-dl", (char**)argv); //replace child process image with youtube-dl
-                wait(NULL);
-            }
-            //wait until youtube-dl exits and find file containing "mp(3/4)"
-            wait(NULL);
+            execvec("../youtube-dl", argslist, "../externals/youtube-dl/temp");
                 
                 
             //code below iterates through directory and find file with "mp" in it's name'
-            DIR * dir = opendir("./");
+            DIR * dir = opendir("../externals/youtube-dl/temp");
             struct dirent *entry;
                 
             std::string filename;
-            while((entry = readdir(dir)) != NULL){
+            bool found = false;
+            while(((entry = readdir(dir)) != NULL) || found){
                 filename = entry->d_name;
+                std::cout << filename << std::endl;
                 if(filename.find("mp", 0) != std::string::npos){
+                    filename = "../externals/youtube-dl/temp/" + filename;
+                    found = true;
                     break;
                 }
                 else{
@@ -159,6 +167,34 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 
             //delete youtube file
             remove(filename.c_str());
+            //end of youtube-dl
+        }
+        if(message.startsWith("-say ")){
+            std::string text = replace_string(message.content, "-say ", "");
+            std::vector<std::string> argslist;
+            
+            argslist.push_back("--backend=user");
+            argslist.push_back("say.exe");
+            argslist.push_back("-w");
+            argslist.push_back("outfile.wav");
+            argslist.push_back(text);
+            
+            
+            try{
+                execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
+            }catch(...){
+                std::cout << "Couln't exec wineconsole" << std::endl;
+            }
+            try{
+                int time = 2000;
+                wait(&time);
+                uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
+                //remove("../externals/dectalk/outfile.wav");
+            }catch(SleepyDiscord::ErrorCode err){
+                std::cout << "Couldn't upload file: " << err << std::endl;
+            }
+            
+            
         }
             
     }
