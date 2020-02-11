@@ -27,6 +27,9 @@ What things you need to install the software
 CMake
 Make
 libcurl4-openssl-dev
+Wine
+wine-mono
+wine-gecko
 ```
 
 ### Installing
