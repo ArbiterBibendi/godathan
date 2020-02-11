@@ -13,6 +13,9 @@
     Usage: -yt [format] VIDEO (Name or Link)
     Downloads a youtube video into the discord chat (Must be smaller than 8MB)
     Formats: mp3, mp4
+-say 
+    Usage: -say Message
+    Uploads an audio file text-to-speech
 ```
 ## Getting Started
 
