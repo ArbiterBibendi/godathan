@@ -40,8 +40,8 @@ std::vector<std::string> Godathan::arguments(std::string s){ //Places command li
 }
 int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir){
     int argsSize = argslist.size();
-    const char* argv1[argsSize+2]; //extra space added for program name and sentinel
-                
+    const char* argv1[argsSize+2]; //extra space added for program name and terminator
+    //memset(argv1, 0, sizeof(argv1));
              
     //Covert arguments vector into a char * array to pass to execv
     for (int i = 0; i < argsSize; i++){ 
@@ -59,11 +59,11 @@ int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argsli
             chdir(workingDir.c_str());
             execv(pathToProcess.c_str(), (char**)argv); //replace child process image with program
         }
+        wait(NULL);
     }catch(...){
         return 1;
     }
-
-    wait(NULL);
+    
             
     return 0;
 }
@@ -108,7 +108,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             std::string args = replace_string(message.content, "-yt ", "");
             std::string url;
             if (args.find("mp3 ") == 0){ //if option mp3 is specified extract url and specify mp3 format
-               sendMessage(message.channelID, "Downloading MP3");
+                sendMessage(message.channelID, "Downloading MP3");
                 
                 args.erase(0,4);
                 url = args;
@@ -125,7 +125,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 sendMessage(message.channelID, "You didn't specify a format. Defaulting to MP4.");
                     
                 url = args;
-                    args = "-f mp4";
+                args = "-f mp4";
             }
             args += " --max-filesize 8m"; //max discord file upload size is 8 megabytes
 
@@ -161,7 +161,8 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 uploadFile(message.channelID, filename, "");
                     
             }
-            catch(...){
+            catch(SleepyDiscord::ErrorCode err){
+                std::cout << "Couldn't upload file: " << err << std::endl;
                 sendMessage(message.channelID, "Something went wrong. The file is probably too large");
             }
                 
@@ -186,8 +187,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 std::cout << "Couln't exec wineconsole" << std::endl;
             }
             try{
-                int time = 2000;
-                wait(&time);
+                usleep(1000); //make sure the file is written to before sending
                 uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
                 //remove("../externals/dectalk/outfile.wav");
             }catch(SleepyDiscord::ErrorCode err){
