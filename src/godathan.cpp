@@ -189,7 +189,6 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             try{
                 usleep(1000); //make sure the file is written to before sending
                 uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
-                //remove("../externals/dectalk/outfile.wav");
             }catch(SleepyDiscord::ErrorCode err){
                 std::cout << "Couldn't upload file: " << err << std::endl;
             }

@@ -2,4 +2,4 @@
 	path = lib/sleepy-discord
 	url = https://github.com/yourWaifu/sleepy-discord
 [submodule "lib/sleepydiscord"]
-	branch = master
+	branch = develop

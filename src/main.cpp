@@ -21,7 +21,7 @@ int main(){
     else{
         std::getline(tokenFile, APITOKEN);
         tokenFile.close();
-        Godathan godathan(APITOKEN, 2);
+        Godathan godathan(APITOKEN);
         godathan.run();
         return 0;
     }
