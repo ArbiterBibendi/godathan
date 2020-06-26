@@ -72,6 +72,10 @@ void Godathan::handle_child(int){
     wait(NULL);
 }
 
+void VoiceEventHandler::onReady(SleepyDiscord::VoiceConnection& connection){
+    
+}
+
 void Godathan::onMessage(SleepyDiscord::Message message){
     if(message.author.ID != 456655185901518848){ //If message isn't by godathan
         
@@ -189,6 +193,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             try{
                 usleep(1000); //make sure the file is written to before sending
                 uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
+                connectToVoiceChannel("321200898816868354", "418592450081193988");
                 
             }catch(SleepyDiscord::ErrorCode err){
                 std::cout << "Couldn't upload file: " << err << std::endl;

@@ -1,7 +1,5 @@
 #pragma once
-
 #include "sleepy_discord/websocketpp_websocket.h"
-#define SLEEPY_VOICE_ENABLED 1
 #include <sys/wait.h>
 #include <sys/wait.h>
 #include <dirent.h>
@@ -25,3 +23,8 @@ public:
 };
 
 
+class VoiceEventHandler : public SleepyDiscord::BaseVoiceEventHandler {
+public:
+    VoiceEventHandler() {}
+    void onReady(SleepyDiscord::VoiceConnection& connection) override;
+}
