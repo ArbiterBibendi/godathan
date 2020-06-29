@@ -1,0 +1,3 @@
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/rebuild_cache.dir
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/edit_cache.dir
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/opus-download.dir

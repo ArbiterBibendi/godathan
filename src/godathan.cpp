@@ -1,5 +1,5 @@
 #include "godathan.h"
-
+#include <string>
 
     
 std::string Godathan::replace_string(std::string string, std::string substr1, std::string substr2){
@@ -71,13 +71,55 @@ int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argsli
 void Godathan::handle_child(int){ //wait for child process to finish before moving on
     wait(NULL);
 }
-
+SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID){
+    SleepyDiscord::VoiceState voiceState;
+    for(int i = 0; i < voiceStates.size(); i++){
+        if(voiceStates[i].userID == userID){
+            voiceState = voiceStates[i];
+        }
+    }
+    
+    return voiceState;
+}
 
 void Godathan::onReady(SleepyDiscord::Ready readyData){
     //VoiceEventHandler voiceEventHandler;
 }
+
+//Gather initial voice states
+void Godathan::onServer(SleepyDiscord::Server server){
+    servers.push_back(server);
+    
+    if (!server.voiceStates.empty()){
+        std::string userID = server.voiceStates.front().userID;
+        for(SleepyDiscord::VoiceState& i : server.voiceStates){
+            voiceStates.push_back(i);
+        }
+        std::cout << "User connected " << userID << std::endl;
+    }
+}
+
+//Track voice states in a vector
+void Godathan::onEditVoiceState(SleepyDiscord::VoiceState& voiceState){
+    
+    std::string userID = voiceState.userID;
+    for(int i = 0; i < voiceStates.size(); i++){
+        if (userID == (std::string)voiceStates[i].userID){
+            voiceStates[i] = voiceState;
+            break;
+        }
+        else{
+            voiceStates.push_back(voiceState);
+        }
+    }
+}
 void Godathan::onMessage(SleepyDiscord::Message message){
-    if(message.author.ID != 456655185901518848){ //If message isn't by godathan
+    
+    std::string authorID = message.author.ID;
+    std::string serverID = message.serverID;
+    
+    
+    if(authorID != "456655185901518848"){ //If message isn't by godathan
         
         if(message.startsWith("-exit")){
             exit(0);
@@ -101,7 +143,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
         
         /* -yt
          * Uploads a specified youtube video or audio to the channel
-         * Usage: -yt format video
+         * Usage: -yt [format] [video name]
          * 
          * Supported formats are mp3 and mp4
          * 
@@ -141,7 +183,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             execvec("../youtube-dl", argslist, "../externals/youtube-dl/temp");
                 
                 
-            //code below iterates through directory and find file with "mp" in it's name'
+            // Scan directory for mp4 and mp3 files and delete them
             DIR * dir = opendir("../externals/youtube-dl/temp");
             struct dirent *entry;
                 
@@ -172,8 +214,13 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 
             //delete youtube file
             remove(filename.c_str());
-            //end of youtube-dl
         }
+        
+        /*  -say
+         *  DECtalk text to speech
+         *  Usage: -say [message]
+         * 
+         */
         if(message.startsWith("-say ")){
             std::string text = replace_string(message.content, "-say ", "");
             std::vector<std::string> argslist;
@@ -189,15 +236,17 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
             }catch(...){
                 std::cout << "Couln't exec wineconsole" << std::endl;
+                usleep(1000); //make sure the file is written to before sending
             }
             try{
-                usleep(1000); //make sure the file is written to before sending
-                uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
-                SleepyDiscord::VoiceContext& context = connectToVoiceChannel("321200898816868354", "418592450081193988");
+                // connect to message author voice channel
+                SleepyDiscord::VoiceState voiceState = getVoiceState(authorID);
+                std::string channelID = voiceState.channelID;
+                SleepyDiscord::VoiceContext& context = connectToVoiceChannel(serverID, channelID);
                 context.setVoiceHandler(&voiceEventHandler);
                 
             }catch(SleepyDiscord::ErrorCode err){
-                std::cout << "Couldn't upload file: " << err << std::endl;
+                std::cout << "Something went wrong" << err << std::endl;
             }
             
             

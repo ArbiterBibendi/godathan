@@ -1,0 +1,3 @@
+/home/drake/projects/godathan/build/cpr-download/CMakeFiles/rebuild_cache.dir
+/home/drake/projects/godathan/build/cpr-download/CMakeFiles/edit_cache.dir
+/home/drake/projects/godathan/build/cpr-download/CMakeFiles/cpr-download.dir

@@ -1,0 +1,1 @@
+cmd='/home/drake/projects/godathan/lib/sleepy-discord/deps/libsodium/configure'

@@ -1,0 +1,14 @@
+# Target labels
+ opus-download
+# Source files and their labels
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/opus-download
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/opus-download.rule
+/home/drake/projects/godathan/build/opus-download/CMakeFiles/opus-download-complete.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-install.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-mkdir.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-download.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-patch.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-configure.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-build.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-test.rule
+/home/drake/projects/godathan/build/opus-download/opus-download-prefix/src/opus-download-stamp/opus-download-skip-update.rule

@@ -1,0 +1,94 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/drake/projects/godathan/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5a6b7/fast && /usr/bin/make  -f CMakeFiles/cmTC_5a6b7.dir/build.make CMakeFiles/cmTC_5a6b7.dir/build
+make[1]: Entering directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a6b7.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5a6b7.dir/src.c.o   -c /home/drake/projects/godathan/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5a6b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a6b7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_5a6b7.dir/src.c.o  -o cmTC_5a6b7 
+/usr/bin/ld: CMakeFiles/cmTC_5a6b7.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5a6b7.dir/build.make:107: cmTC_5a6b7] Error 1
+make[1]: Leaving directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_5a6b7/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function lrintf exists failed with the following output:
+Change Dir: /home/drake/projects/godathan/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_00af3/fast && /usr/bin/make  -f CMakeFiles/cmTC_00af3.dir/build.make CMakeFiles/cmTC_00af3.dir/build
+make[1]: Entering directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00af3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=lrintf   -o CMakeFiles/cmTC_00af3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.17/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function 'lrintf'; expected 'long int(float)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.17/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.17/Modules/CheckFunctionExists.c:1:1: note: 'lrintf' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_00af3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00af3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=lrintf    -rdynamic CMakeFiles/cmTC_00af3.dir/CheckFunctionExists.c.o  -o cmTC_00af3 
+/usr/bin/ld: CMakeFiles/cmTC_00af3.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `lrintf'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_00af3.dir/build.make:107: cmTC_00af3] Error 1
+make[1]: Leaving directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_00af3/fast] Error 2
+
+
+
+Determining if the function lrint exists failed with the following output:
+Change Dir: /home/drake/projects/godathan/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6ad2b/fast && /usr/bin/make  -f CMakeFiles/cmTC_6ad2b.dir/build.make CMakeFiles/cmTC_6ad2b.dir/build
+make[1]: Entering directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ad2b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=lrint   -o CMakeFiles/cmTC_6ad2b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.17/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function 'lrint'; expected 'long int(double)' [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.17/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+/usr/share/cmake-3.17/Modules/CheckFunctionExists.c:1:1: note: 'lrint' is declared in header '<math.h>'
+  +++ |+#include <math.h>
+    1 | #ifdef CHECK_FUNCTION_EXISTS
+Linking C executable cmTC_6ad2b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ad2b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=lrint    -rdynamic CMakeFiles/cmTC_6ad2b.dir/CheckFunctionExists.c.o  -o cmTC_6ad2b 
+/usr/bin/ld: CMakeFiles/cmTC_6ad2b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `lrint'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6ad2b.dir/build.make:107: cmTC_6ad2b] Error 1
+make[1]: Leaving directory '/home/drake/projects/godathan/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_6ad2b/fast] Error 2
+
+
+

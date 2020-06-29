@@ -1,6 +1,4 @@
 [submodule "lib/sleepy-discord"]
 	path = lib/sleepy-discord
-	url = https://github.com/yourWaifu/sleepy-discord
-	branch = develop
-[submodule "lib/sleepydiscord"]
+	url = https://github.com/ArbiterBibendi/sleepy-discord
 	branch = develop

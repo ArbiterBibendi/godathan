@@ -16,15 +16,21 @@ class Godathan : public SleepyDiscord::DiscordClient{
 
 public:
     using SleepyDiscord::DiscordClient::DiscordClient;
-    std::string replace_string(std::string string, std::string substr1, std::string substr2);
-    std::vector<std::string> arguments(std::string s);
-    int execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir);
-    static void handle_child(int);
+    std::string              replace_string (std::string string, std::string substr1, std::string substr2);
+    int                      execvec        (std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir);
+    std::vector<std::string> arguments      (std::string s);
+    static void              handle_child   (int);
     
-    void onReady(SleepyDiscord::Ready readData) override;
-    void onMessage(SleepyDiscord::Message message) override;
+    void onServer         (SleepyDiscord::Server      server    ) override;
+    void onReady          (SleepyDiscord::Ready       readData  ) override;
+    void onMessage        (SleepyDiscord::Message     message   ) override;
+    void onEditVoiceState (SleepyDiscord::VoiceState& voiceState) override;
+    
+    SleepyDiscord::VoiceState getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID);
     
     VoiceEventHandler voiceEventHandler;
+    std::vector<SleepyDiscord::Server> servers;
+    std::vector<SleepyDiscord::VoiceState> voiceStates;
 };
 
 

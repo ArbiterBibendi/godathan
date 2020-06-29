@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+de37c625f41f3c7805bc894c7465a5d8 CMakeFiles/opus-download
+d287ed452244f500a3bf0f3a87c41a8f CMakeFiles/opus-download-complete
+5c8abd4f183267b2a6b4f4768089b4d9 opus-download-prefix/src/opus-download-stamp/opus-download-build
+5b937d5cfb66cdb8777c409a0cf52850 opus-download-prefix/src/opus-download-stamp/opus-download-configure
+0ddcffe679eeb7b20ad99ecc69eec470 opus-download-prefix/src/opus-download-stamp/opus-download-download
+e109bdaa63c0c0fc3797c623c7cdcab4 opus-download-prefix/src/opus-download-stamp/opus-download-install
+313633fb489c5e9edb6054462db028ef opus-download-prefix/src/opus-download-stamp/opus-download-mkdir
+0e423114070153d2efac2747168fce7e opus-download-prefix/src/opus-download-stamp/opus-download-patch
+de080e068519ff3177e3fd6addc268bc opus-download-prefix/src/opus-download-stamp/opus-download-skip-update
+f4392bcbdbb3eaaec5e10c583e943869 opus-download-prefix/src/opus-download-stamp/opus-download-test
