@@ -1,6 +1,6 @@
 
 
-
+#include <iostream>
 #include <godathan.h>
 #include <string>
 #include <fstream>
@@ -22,7 +22,6 @@ int main(){
         std::getline(tokenFile, APITOKEN);
         tokenFile.close();
         Godathan godathan(APITOKEN);
-        VoiceEventHandler voiceEventHandler;
         godathan.run();
         return 0;
     }

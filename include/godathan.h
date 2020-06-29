@@ -1,6 +1,6 @@
 #pragma once
 #include "sleepy_discord/websocketpp_websocket.h"
-#include <sys/wait.h>
+#include "voiceeventhandler.h"
 #include <sys/wait.h>
 #include <dirent.h>
 #include <stdio.h>
@@ -9,6 +9,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+
 
 class Godathan : public SleepyDiscord::DiscordClient{
 
@@ -19,12 +21,11 @@ public:
     int execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir);
     static void handle_child(int);
     
+    void onReady(SleepyDiscord::Ready readData) override;
     void onMessage(SleepyDiscord::Message message) override;
+    
+    VoiceEventHandler voiceEventHandler;
 };
 
 
-class VoiceEventHandler : public SleepyDiscord::BaseVoiceEventHandler {
-public:
-    VoiceEventHandler() {}
-    void onReady(SleepyDiscord::VoiceConnection& connection) override;
-}
+

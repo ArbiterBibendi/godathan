@@ -38,7 +38,7 @@ std::vector<std::string> Godathan::arguments(std::string s){ //Places command li
         
     return args;
 }
-int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir){
+int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir){ //execve with argument list being a vector
     int argsSize = argslist.size();
     const char* argv1[argsSize+2]; //extra space added for program name and terminator
     //memset(argv1, 0, sizeof(argv1));
@@ -68,14 +68,14 @@ int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argsli
     return 0;
 }
 
-void Godathan::handle_child(int){
+void Godathan::handle_child(int){ //wait for child process to finish before moving on
     wait(NULL);
 }
 
-void VoiceEventHandler::onReady(SleepyDiscord::VoiceConnection& connection){
-    
-}
 
+void Godathan::onReady(SleepyDiscord::Ready readyData){
+    //VoiceEventHandler voiceEventHandler;
+}
 void Godathan::onMessage(SleepyDiscord::Message message){
     if(message.author.ID != 456655185901518848){ //If message isn't by godathan
         
@@ -193,7 +193,8 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             try{
                 usleep(1000); //make sure the file is written to before sending
                 uploadFile(message.channelID, "../externals/dectalk/outfile.wav", "");
-                connectToVoiceChannel("321200898816868354", "418592450081193988");
+                SleepyDiscord::VoiceContext& context = connectToVoiceChannel("321200898816868354", "418592450081193988");
+                context.setVoiceHandler(&voiceEventHandler);
                 
             }catch(SleepyDiscord::ErrorCode err){
                 std::cout << "Couldn't upload file: " << err << std::endl;
