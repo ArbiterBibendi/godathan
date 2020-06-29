@@ -2,3 +2,4 @@
 APITOKEN
 *.out
 *.wav
+bin/*
