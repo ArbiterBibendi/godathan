@@ -3,3 +3,4 @@ APITOKEN
 *.out
 *.wav
 bin/*
+build/*
