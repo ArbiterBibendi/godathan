@@ -50,10 +50,10 @@ then rename APITOKEN.example to APITOKEN
 echo "{YOUR_API_TOKEN}" > APITOKEN.example
 mv APITOKEN.example APITOKEN
 ```
-Move to the build directory and build the project
+Build
 ```
+cmake -B build
 cd build
-cmake ..
 make
 ```
 
@@ -71,6 +71,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Thank you to [yourWaifu](https://github.com/yourWaifu) for the Discord API Wrapper for C++
-* And thank you to all of the contributors of [youtuble-dl](https://github.com/ytdl-org/youtube-dl) for 
+* [yourWaifu](https://github.com/yourWaifu) for the Discord API Wrapper for C++
+* All of the contributors of [youtuble-dl](https://github.com/ytdl-org/youtube-dl) for 
   making and maintaining such an amazing tool.
+* Digital Equipment Corporation for DECTalk
