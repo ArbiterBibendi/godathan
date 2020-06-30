@@ -9718,11 +9718,7 @@ asio_udp.h
 standard_config_header.h
 ../lib/sleepy-discord/include/sleepy_discord/standard_config_header.h
 
-/home/drake/projects/godathan/src/voiceeventhandler.cpp
-voiceeventhandler.h
-/home/drake/projects/godathan/src/voiceeventhandler.h
-iostream
--
+/home/drake/projects/godathan/src/godathan.cpp
 godathan.h
 /home/drake/projects/godathan/src/godathan.h
 

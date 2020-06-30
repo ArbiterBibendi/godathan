@@ -85,8 +85,6 @@ void Godathan::onReady(SleepyDiscord::Ready readyData){
     std::cout << "Godathan Ready" << std::endl;
 }
 void Godathan::onServer(SleepyDiscord::Server server){
-    servers.push_back(server);
-    
     if (!server.voiceStates.empty()){
         for(SleepyDiscord::VoiceState& i : server.voiceStates){
             std::string userID = i.userID;
@@ -102,11 +100,11 @@ void Godathan::onEditVoiceState(SleepyDiscord::VoiceState& voiceState){
     SleepyDiscord::User user = getUser(userID);
     bool foundUser = false;
 
-    
-    for(int i = 0; i <= voiceStates.size(); i++){
-        if(voiceStates.size() == 0){ 
-            voiceStates.push_back(voiceState);
-        } else if (userID == (std::string)voiceStates[i].userID){
+    if(voiceStates.size() == 0){ 
+        voiceStates.push_back(voiceState);
+    }
+    for(int i = 0; i < voiceStates.size(); i++){
+         if (userID == (std::string)voiceStates[i].userID){
             voiceStates[i] = voiceState;
             foundUser = true;
             break;
@@ -184,7 +182,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             argslist.push_back("ytsearch:" + url);
             execvec("../youtube-dl", argslist, "../externals/youtube-dl/temp");
                 
-            /** Scan directory for mp4 and mp3 files and delete them **/
+            /** Scan directory for mp4 and mp3 files to get filename **/
             DIR * dir = opendir("../externals/youtube-dl/temp");
             struct dirent *entry;
                 
@@ -203,9 +201,13 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             }
             try{ 
                 uploadFile(message.channelID, filename, ""); 
-            } catch(SleepyDiscord::ErrorCode err){
-                std::cout << "Couldn't upload file: " << err << std::endl;
-                sendMessage(message.channelID, "Something went wrong. The file is probably too large"); /** Discord max filesize is 8MB **/
+                if (filename == ""){
+                    sendMessage(message.channelID, "Something went wrong. The file is probably too large");
+                }
+                std::cout << "Uploading file: " << filename << std::endl;
+            } catch(...){
+                sendMessage(message.channelID, "Something went wrong."); /** Discord max filesize is 8MB **/
+                std::cout << "Couldn't upload file" << std::endl;
             }
             
             remove(filename.c_str());
