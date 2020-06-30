@@ -249,9 +249,9 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             
                     try{
                         execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
+                        usleep(1000); //make sure the file is written to before sending, this is a caveman method so fix this later
                     } catch(...){
                         std::cout << "Couln't exec wineconsole" << std::endl;
-                        usleep(1000); //make sure the file is written to before sending, this is a caveman method so fix this later
                     }
                 } else{
                     std::cout << "User not in a voice channel" << std::endl;

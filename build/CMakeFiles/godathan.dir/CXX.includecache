@@ -9722,3 +9722,13 @@ godathan.h
 string
 -
 
+/home/drake/projects/godathan/src/main.cpp
+iostream
+-
+godathan.h
+-
+string
+-
+fstream
+-
+
