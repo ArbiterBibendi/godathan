@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/godathan.dir/src/main.cpp.o CMakeFiles/godathan.dir/src/godathan.cpp.o CMakeFiles/godathan.dir/src/voiceeventhandler.cpp.o  -o bin/godathan  lib/sleepy-discord/sleepy_discord/libsleepy-discord.a lib/libcpr.a -lcurl -lssl -lcrypto -pthread 
