@@ -19,7 +19,6 @@ public:
     std::string              replace_string (std::string string, std::string substr1, std::string substr2);
     int                      execvec        (std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir);
     std::vector<std::string> arguments      (std::string s);
-    static void              handle_child   (int);
     
     void onServer         (SleepyDiscord::Server      server    ) override;
     void onReady          (SleepyDiscord::Ready       readData  ) override;
