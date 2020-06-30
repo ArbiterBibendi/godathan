@@ -4,7 +4,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 project(godathan)
 
 add_executable(godathan src/main.cpp src/godathan.cpp src/voiceeventhandler.cpp)
-option(ENABLE_VOICE ON)
+set(ENABLE_VOICE ON CACHE BOOL "Enable Voice")
 target_include_directories(godathan PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/lib/sleepy-discord)
