@@ -1,11 +1,9 @@
 #include "godathan.h"
-#include <string>
 
 
 /** Replace substr1 with substr2 inside of string **/
 std::string Godathan::replace_string(std::string string, std::string substr1, std::string substr2){
     std::string newStr = string;
-       
     int pos = string.find(substr1, 0);
     newStr.replace(pos, substr1.length(), substr2);
         
@@ -29,14 +27,11 @@ std::vector<std::string> Godathan::arguments(std::string s){
         quotation1 = s.find("\"", searchIndex);
         quotation2 = s.find("\"", quotation1+1);
             
-        if((quotation1 != std::string::npos) && (quotation2 != std::string::npos))
-        {
+        if((quotation1 != std::string::npos) && (quotation2 != std::string::npos)){
             sub = s.substr(quotation1, quotation2-quotation1+1);
             searchIndex = quotation2+1;
             args.push_back(sub);
         }
-        
-        
         space = s.find(" ", searchIndex);
         sub = s.substr(searchIndex, space-searchIndex);
         searchIndex = space+1;
@@ -83,7 +78,6 @@ SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<Sleep
         if(voiceStates[i].userID == userID){
             voiceState = voiceStates[i];
         }
-        std::cout << "getVoiceState User " << (std::string)voiceStates[i].userID << "connected on " << (std::string)voiceStates[i].channelID << std::endl;
     }
     return voiceState;
 }
@@ -97,7 +91,6 @@ void Godathan::onServer(SleepyDiscord::Server server){
         for(SleepyDiscord::VoiceState& i : server.voiceStates){
             std::string userID = i.userID;
             SleepyDiscord::User user = getUser(userID);
-            std::cout << "onServer User " << user.username << "connected on " << (std::string)i.channelID << std::endl;
             
             voiceStates.push_back(i);
         }
@@ -108,8 +101,7 @@ void Godathan::onEditVoiceState(SleepyDiscord::VoiceState& voiceState){
     std::string userID = voiceState.userID;
     SleepyDiscord::User user = getUser(userID);
     bool foundUser = false;
-    
-    std::cout << "onEditVoiceState User " << user.username << "connected on " << (std::string)voiceState.channelID << std::endl;
+
     
     for(int i = 0; i <= voiceStates.size(); i++){
         if(voiceStates.size() == 0){ 
@@ -127,12 +119,13 @@ void Godathan::onEditVoiceState(SleepyDiscord::VoiceState& voiceState){
     }
 }
 void Godathan::onMessage(SleepyDiscord::Message message){
-    std::string authorID = message.author.ID;
-    std::string serverID = message.serverID;
+    SleepyDiscord::Snowflake<SleepyDiscord::User> authorID = message.author.ID;
+    SleepyDiscord::Snowflake<SleepyDiscord::Server>serverID = message.serverID;
     
     if(authorID != "456655185901518848"){ //If message isn't by godathan 
-        if(message.startsWith("-exit")){
-            exit(0);
+        if(message.startsWith("andy")){
+            sendMessage(message.channelID, "mark");
+            disconnectServerVoiceConnections(serverID);
         }
         /* 
          * -send
@@ -229,8 +222,9 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 std::string channelID = voiceState.channelID;
                 if(channelID != ""){ 
                     /** Join the same channel as the author **/
+                    VoiceEventHandler* voiceEventHandler = new VoiceEventHandler;
                     SleepyDiscord::VoiceContext& context = connectToVoiceChannel(serverID, channelID);
-                    context.setVoiceHandler(&voiceEventHandler);
+                    context.setVoiceHandler(voiceEventHandler);
                     
                     /**
                     * DECTalk is a windows application so we need to use wineconsole
@@ -245,16 +239,16 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                     argslist.push_back("-w");
                     argslist.push_back("outfile.wav");
                     argslist.push_back(text);
-            
-            
                     try{
                         execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
                         usleep(1000); //make sure the file is written to before sending, this is a caveman method so fix this later
+                        
                     } catch(...){
-                        std::cout << "Couln't exec wineconsole" << std::endl;
+                        std::cout << "Couldn't exec wineconsole" << std::endl;
                     }
                 } else{
                     std::cout << "User not in a voice channel" << std::endl;
+                    
                 }
             } catch(SleepyDiscord::ErrorCode err){
                 std::cout << "Something went wrong" << err << std::endl;

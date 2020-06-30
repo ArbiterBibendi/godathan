@@ -1242,6 +1242,7 @@ CMakeFiles/godathan.dir/src/main.cpp.o
  ../lib/sleepy-discord/include/sleepy_discord/websocketpp_websocket.h
  /home/drake/projects/godathan/src/main.cpp
 CMakeFiles/godathan.dir/src/voiceeventhandler.cpp.o
+ ../include/godathan.h
  ../include/voiceeventhandler.h
  ../lib/sleepy-discord/deps/asio/asio/include/asio.hpp
  ../lib/sleepy-discord/deps/asio/asio/include/asio/associated_allocator.hpp

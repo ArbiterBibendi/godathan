@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <condition_variable>
 
 
 class Godathan : public SleepyDiscord::DiscordClient{
@@ -27,7 +27,7 @@ public:
     
     SleepyDiscord::VoiceState getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID);
     
-    VoiceEventHandler voiceEventHandler;
+    VoiceEventHandler* voiceEventHandler;
     std::vector<SleepyDiscord::Server> servers;
     std::vector<SleepyDiscord::VoiceState> voiceStates;
 };

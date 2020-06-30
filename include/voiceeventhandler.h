@@ -5,7 +5,8 @@
 class VoiceEventHandler : public SleepyDiscord::BaseVoiceEventHandler {
 public:
     VoiceEventHandler();
-    ~VoiceEventHandler(){};
+    ~VoiceEventHandler();
     void onReady(SleepyDiscord::VoiceConnection& connection) override;
+    
 };
 
