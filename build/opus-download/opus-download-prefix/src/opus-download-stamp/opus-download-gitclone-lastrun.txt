@@ -1,3 +1,0 @@
-repository='https://gitlab.xiph.org/xiph/opus.git'
-module=''
-tag='origin'

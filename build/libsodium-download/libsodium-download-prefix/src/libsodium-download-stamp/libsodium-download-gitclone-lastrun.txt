@@ -1,3 +1,0 @@
-repository='https://github.com/jedisct1/libsodium.git'
-module=''
-tag='origin'
