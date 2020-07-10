@@ -75,17 +75,10 @@ int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argsli
 
 SleepyDiscord::VoiceConnection& Godathan::getVoiceConnection(SleepyDiscord::Snowflake<SleepyDiscord::Server> serverID){
     bool connectionFound = false;
-    for(SleepyDiscord::VoiceConnection& i : voiceConnections){
-        if (i.getContext().getServerID() == serverID){
-            connectionFound = true;
-            return i;
-        } else {
-            connectionFound = false;
-        }
-    }
-    if (!connectionFound){
-        return *voiceConnections.end();
-    }
+    auto c = std::find_if(voiceConnections.begin(), voiceConnections.end(), [&serverID](SleepyDiscord::VoiceConnection& connection){
+        return serverID == connection.getContext().getServerID();
+    });
+    return *c;
 }
 SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID){
     SleepyDiscord::VoiceState voiceState;
@@ -97,20 +90,22 @@ SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<Sleep
     return voiceState;
 }
 void Godathan::playAudio(std::string serverID, std::string channelID, std::string path){
-    SleepyDiscord::VoiceConnection& connection = getVoiceConnection(serverID);
-    if(connection == *voiceConnections.end()){
+    if(getVoiceConnection(serverID) == *voiceConnections.end()){
         VoiceEventHandler* voiceEventHandler = new VoiceEventHandler;
         SleepyDiscord::VoiceContext& context = connectToVoiceChannel(serverID, channelID);
         context.setVoiceHandler(voiceEventHandler);
     } else {
         std::cout << "Connection found in server\n";
     }
-    while(!connection.readyToSpeak){
-        usleep(10000);
-        std::cout << (bool)connection.readyToSpeak;
+
+    
+    while(getVoiceConnection(serverID) == *voiceConnections.end() && !getVoiceConnection(serverID).readyToSpeak){
+        usleep(1000);
+        std::cout << "NOT READY" << std::endl;
     }
+    SleepyDiscord::VoiceConnection& connection = getVoiceConnection(serverID);
     std::cout << "READY\n";
-    //connection.startSpeaking<Source>();
+    connection.startSpeaking<Source>();
     
 }
 void Godathan::onReady(SleepyDiscord::Ready readyData){
@@ -274,7 +269,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                     argslist.push_back("outfile.wav");
                     argslist.push_back(text);
                     try{
-                        execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
+                        //execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
                         usleep(1000); //make sure the file is written to before sending, this is a caveman method so fix this later
                         
                     } catch(...){
