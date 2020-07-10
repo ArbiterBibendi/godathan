@@ -1,6 +1,6 @@
 #pragma once
 #include "sleepy_discord/websocketpp_websocket.h"
-#include "voiceeventhandler.h"
+#include "voice.h"
 #include <sys/wait.h>
 #include <dirent.h>
 #include <stdio.h>
@@ -25,9 +25,10 @@ public:
     void onMessage        (SleepyDiscord::Message     message   ) override;
     void onEditVoiceState (SleepyDiscord::VoiceState& voiceState) override;
     
-    SleepyDiscord::VoiceState getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID);
+    SleepyDiscord::VoiceState       getVoiceState      (SleepyDiscord::Snowflake<SleepyDiscord::User> userID);
+    SleepyDiscord::VoiceConnection& getVoiceConnection (SleepyDiscord::Snowflake<SleepyDiscord::Server> serverID);
+    void                            playAudio          (std::string serverID, std::string channelID, std::string path);
     
-    VoiceEventHandler* voiceEventHandler;
     std::vector<SleepyDiscord::Server> servers;
     std::vector<SleepyDiscord::VoiceState> voiceStates;
 };

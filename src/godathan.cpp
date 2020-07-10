@@ -72,6 +72,21 @@ int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argsli
     }  
     return 0;
 }
+
+SleepyDiscord::VoiceConnection& Godathan::getVoiceConnection(SleepyDiscord::Snowflake<SleepyDiscord::Server> serverID){
+    bool connectionFound = false;
+    for(SleepyDiscord::VoiceConnection& i : voiceConnections){
+        if (i.getContext().getServerID() == serverID){
+            connectionFound = true;
+            return i;
+        } else {
+            connectionFound = false;
+        }
+    }
+    if (!connectionFound){
+        return *voiceConnections.end();
+    }
+}
 SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<SleepyDiscord::User> userID){
     SleepyDiscord::VoiceState voiceState;
     for(int i = 0; i < voiceStates.size(); i++){
@@ -80,6 +95,23 @@ SleepyDiscord::VoiceState Godathan::getVoiceState(SleepyDiscord::Snowflake<Sleep
         }
     }
     return voiceState;
+}
+void Godathan::playAudio(std::string serverID, std::string channelID, std::string path){
+    SleepyDiscord::VoiceConnection& connection = getVoiceConnection(serverID);
+    if(connection == *voiceConnections.end()){
+        VoiceEventHandler* voiceEventHandler = new VoiceEventHandler;
+        SleepyDiscord::VoiceContext& context = connectToVoiceChannel(serverID, channelID);
+        context.setVoiceHandler(voiceEventHandler);
+    } else {
+        std::cout << "Connection found in server\n";
+    }
+    while(!connection.readyToSpeak){
+        usleep(10000);
+        std::cout << (bool)connection.readyToSpeak;
+    }
+    std::cout << "READY\n";
+    //connection.startSpeaking<Source>();
+    
 }
 void Godathan::onReady(SleepyDiscord::Ready readyData){
     std::cout << "Godathan Ready" << std::endl;
@@ -119,6 +151,8 @@ void Godathan::onEditVoiceState(SleepyDiscord::VoiceState& voiceState){
 void Godathan::onMessage(SleepyDiscord::Message message){
     SleepyDiscord::Snowflake<SleepyDiscord::User> authorID = message.author.ID;
     SleepyDiscord::Snowflake<SleepyDiscord::Server>serverID = message.serverID;
+    
+    
     
     if(authorID != "456655185901518848"){ //If message isn't by godathan 
         if(message.startsWith("andy")){
@@ -201,6 +235,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
             }
             try{ 
                 uploadFile(message.channelID, filename, ""); 
+                
                 if (filename == ""){
                     sendMessage(message.channelID, "Something went wrong. The file is probably too large");
                 }
@@ -223,10 +258,7 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                 SleepyDiscord::VoiceState voiceState = getVoiceState(authorID);
                 std::string channelID = voiceState.channelID;
                 if(channelID != ""){ 
-                    /** Join the same channel as the author **/
-                    VoiceEventHandler* voiceEventHandler = new VoiceEventHandler;
-                    SleepyDiscord::VoiceContext& context = connectToVoiceChannel(serverID, channelID);
-                    context.setVoiceHandler(voiceEventHandler);
+                    playAudio(serverID, channelID, "");
                     
                     /**
                     * DECTalk is a windows application so we need to use wineconsole

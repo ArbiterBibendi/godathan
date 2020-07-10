@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.2)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 project(godathan)
 
-add_executable(godathan src/main.cpp src/godathan.cpp src/voiceeventhandler.cpp)
+add_executable(godathan src/main.cpp src/godathan.cpp src/voice.cpp)
 set(ENABLE_VOICE ON CACHE BOOL "Enable Voice")
 target_include_directories(godathan PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
