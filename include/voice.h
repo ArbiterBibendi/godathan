@@ -16,7 +16,7 @@ struct Source : public SleepyDiscord::AudioVectorSource {
     std::vector<int16_t> read(SleepyDiscord::AudioTransmissionDetails& details) {
         std::vector<int16_t> buffer(details.proposedLength());
         for (int16_t& sample : buffer){
-            sample = (++sampleOffset / 10) % 2 ? 1000 : -1000;
+            sample = (++sampleOffset / 100) % 2 ? 2000 : -2000;
         }
         return buffer;
     }

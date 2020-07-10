@@ -99,12 +99,13 @@ void Godathan::playAudio(std::string serverID, std::string channelID, std::strin
     }
 
     
-    while(getVoiceConnection(serverID) == *voiceConnections.end() && !getVoiceConnection(serverID).readyToSpeak){
+    while(getVoiceConnection(serverID) == *voiceConnections.end()){
         usleep(1000);
-        std::cout << "NOT READY" << std::endl;
+    }
+    while(!getVoiceConnection(serverID).readyToSpeak){
+        usleep(1000);
     }
     SleepyDiscord::VoiceConnection& connection = getVoiceConnection(serverID);
-    std::cout << "READY\n";
     connection.startSpeaking<Source>();
     
 }
@@ -269,8 +270,9 @@ void Godathan::onMessage(SleepyDiscord::Message message){
                     argslist.push_back("outfile.wav");
                     argslist.push_back(text);
                     try{
-                        //execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
+                        execvec("/usr/bin/wineconsole", argslist, "../externals/dectalk");
                         usleep(1000); //make sure the file is written to before sending, this is a caveman method so fix this later
+                        
                         
                     } catch(...){
                         std::cout << "Couldn't exec wineconsole" << std::endl;
