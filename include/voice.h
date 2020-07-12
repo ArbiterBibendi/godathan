@@ -11,14 +11,15 @@ public:
     
 };
 
-struct Source : public SleepyDiscord::AudioVectorSource {
-    Source() : SleepyDiscord::AudioVectorSource(), sampleOffset(0) {}
-    std::vector<int16_t> read(SleepyDiscord::AudioTransmissionDetails& details) {
-        std::vector<int16_t> buffer(details.proposedLength());
-        for (int16_t& sample : buffer){
+struct Source : public SleepyDiscord::AudioPointerSource {
+    Source() : SleepyDiscord::AudioPointerSource(), sampleOffset(0) {}
+    void read(SleepyDiscord::AudioTransmissionDetails& details, int16_t*& buffer, std::size_t& length) {
+        length = details.proposedLength();
+        std::vector<int16_t> target(details.proposedLength());
+        for (int16_t& sample : target){
             sample = (++sampleOffset / 100) % 2 ? 2000 : -2000;
         }
-        return buffer;
+        buffer = target.data();
     }
     std::size_t sampleOffset = 0;
 };
