@@ -49,12 +49,12 @@ std::vector<std::string> Godathan::arguments(std::string s){
 int Godathan::execvec(std::string pathToProcess, std::vector<std::string> argslist, std::string workingDir){
     int argsSize = argslist.size();
     /** 
-     * argv1 is the argument array before it is casted into a const char *const *
+     * argv1 is the argument array before it is cast into a const char *const *
      * Extra space added for program name and null byte
      */
     const char* argv1[argsSize+2]; 
              
-    /** Covert arguments vector into a char * array with the first element empty **/
+    /** Convert arguments vector into a char * array with the first element empty **/
     for (int i = 0; i < argsSize; i++){ 
         argv1[i+1] = argslist[i].c_str();
     }
