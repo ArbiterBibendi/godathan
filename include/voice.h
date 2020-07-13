@@ -15,9 +15,10 @@ public:
 
 
 /**
- * TODO: PRINT HEADER AND VERIFY ITS CONTENTS
- * TODO: USE HEADER VALUES TO READ WAV DATA INTO MEMORY
- * TODO: FILL VOICE BUFFER WITH WAV SAMPLES
+ * TODO: USE CORRECT WAV FILE
+ * TODO: FIX ALIASING
+ * TODO: RESAMPLE CORRECT WAV FILE TO 48000HZ
+ * TODO: REFACTOR THIS MESS
  */
 struct WavFile {
     WavFile(std::string filePath){
@@ -57,7 +58,7 @@ struct WavFile {
 
 
 struct Source : public SleepyDiscord::AudioPointerSource {
-    Source() : SleepyDiscord::AudioPointerSource(), file("../externals/dectalk/piano2.wav"), sampleOffset(0) {
+    Source() : SleepyDiscord::AudioPointerSource(), file("../externals/dectalk/piano2.wav"), sampleOffset(0) { //Init file with test file: 48khz 16 bits per sample not pushed to git
         numSamples = file.subchunk2Size / file.numChannels;
         std::cout << "NUMSAMPLES " << (unsigned int)numSamples << std::endl;
     }
