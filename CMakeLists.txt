@@ -6,6 +6,7 @@ project(godathan)
 add_executable(godathan src/main.cpp src/godathan.cpp src/voice.cpp)
 set(ENABLE_VOICE ON CACHE BOOL "Enable Voice")
 target_include_directories(godathan PUBLIC ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(godathan PUBLIC ${CMAKE_SOURCE_DIR}/lib)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/lib/sleepy-discord)
 target_link_libraries(godathan sleepy-discord)

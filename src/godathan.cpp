@@ -98,7 +98,6 @@ void Godathan::playAudio(std::string serverID, std::string channelID, std::strin
         std::cout << "Connection found in server\n";
     }
 
-    
     while(getVoiceConnection(serverID) == *voiceConnections.end()){
         usleep(1000);
     }
@@ -107,7 +106,6 @@ void Godathan::playAudio(std::string serverID, std::string channelID, std::strin
     }
     SleepyDiscord::VoiceConnection& connection = getVoiceConnection(serverID);
     connection.startSpeaking<Source>();
-    
 }
 void Godathan::onReady(SleepyDiscord::Ready readyData){
     std::cout << "Godathan Ready" << std::endl;
