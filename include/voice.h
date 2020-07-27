@@ -3,6 +3,9 @@
 #include "sleepy_discord/websocketpp_websocket.h"
 #include <fstream>
 #include <iomanip>
+#include <math.h>
+#include <cstring>
+
 
 class VoiceEventHandler : public SleepyDiscord::BaseVoiceEventHandler {
 public:
@@ -37,21 +40,20 @@ struct WavFile {
         } else{
             std::cout << "Couldn't open WAV" << std::endl;
         }
-        
     }
     char            chunkID[4];
-    unsigned int   chunkSize;
+    unsigned int    chunkSize;
     char            format[4];
     char            subchunkID[4];
-    unsigned int   subchunkSize;
+    unsigned int    subchunkSize;
     unsigned short  audioFormat;
     unsigned short  numChannels;
-    unsigned int   sampleRate;
-    unsigned int   byteRate;
+    unsigned int    sampleRate;
+    unsigned int    byteRate;
     unsigned short  blockAlign;
     unsigned short  bitsPerSample;
     char            subchunk2ID[4];
-    unsigned int   subchunk2Size;
+    unsigned int    subchunk2Size;
     std::vector<int16_t> data;
     
 };
@@ -59,27 +61,36 @@ struct WavFile {
 
 struct Source : public SleepyDiscord::AudioPointerSource {
     Source() : SleepyDiscord::AudioPointerSource(), file("../externals/dectalk/piano2.wav"), sampleOffset(0) { //Init file with test file: 48khz 16 bits per sample not pushed to git
-        numSamples = file.subchunk2Size / file.numChannels;
+        numSamples = file.data.size();
         std::cout << "NUMSAMPLES " << (unsigned int)numSamples << std::endl;
     }
     
     
     
     void read(SleepyDiscord::AudioTransmissionDetails& details, int16_t*& buffer, std::size_t& length) {
-        length = details.proposedLength() < (numSamples-sampleOffset) ? details.proposedLength() : 0;
+        length = (signed)details.proposedLength() < (numSamples-sampleOffset) ? details.proposedLength() : 0;
         std::vector<int16_t> target(details.proposedLength());
+        memset(target.data(), 0, target.capacity());
         for (int16_t& sample : target){
-
             //sample = (++sampleOffset / 100) % 2 ? 1 : -1;
-            sample = file.data[sampleOffset++];
-            //std::cout << sampleOffset << std::endl;
-            //std::cout << sample << std::endl;
-
+            if(sampleOffset < numSamples){
+                sample = file.data[sampleOffset++];
+                if(sample != 0){
+                    std::cout << sample << std::endl;
+                } else {
+                    sample = 1000;
+                }
+            }
+            
+            
+            
+            
         }
         buffer = target.data();
     }
-    unsigned int numSamples = 0;
-    std::size_t sampleOffset = 0;
+    int numSamples = 0;
+    int sampleOffset = 0;
     WavFile file;
 };
+
 
