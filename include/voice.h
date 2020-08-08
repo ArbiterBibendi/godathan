@@ -67,27 +67,12 @@ struct Source : public SleepyDiscord::AudioPointerSource {
     
     
     
-    void read(SleepyDiscord::AudioTransmissionDetails& details, int16_t*& buffer, std::size_t& length) {
-        length = (signed)details.proposedLength() < (numSamples-sampleOffset) ? details.proposedLength() : 0;
-        std::vector<int16_t> target(details.proposedLength());
-        memset(target.data(), 0, target.capacity());
-        for (int16_t& sample : target){
-            //sample = (++sampleOffset / 100) % 2 ? 1 : -1;
-            if(sampleOffset < numSamples){
-                sample = file.data[sampleOffset++];
-                if(sample != 0){
-                    std::cout << sample << std::endl;
-                } else {
-                    sample = 1000;
-                }
-            }
-            
-            
-            
-            
-        }
-        buffer = target.data();
+    void read(SleepyDiscord::AudioTransmissionDetails& details, SleepyDiscord::AudioSample* &buffer, std::size_t& length) {
+        length = (signed)details.proposedLength() < (numSamples-progress) ? details.proposedLength() : 0;
+        buffer = &file.data.data()[progress];
+        progress += details.proposedLength();
     }
+    int progress = 0;
     int numSamples = 0;
     int sampleOffset = 0;
     WavFile file;
